@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dezvoltarea web</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../images/icon.png">
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+            <a href="../index.html">Acasa</a>
+            <a href="inscrieri.html">Inscrieri</a>
+            <a href="materiale.html">Materiale</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inscrieri">
+
+            <div class="tint">
+
+            </div>
+
+            <div class="section-info">
+                <h1>Inscrie-te la curs!</h1>
+                <h3>Perioada de inregistrare 01.09 - 15.09</h3>
+            </div>
+
+        </section>
+
+        <section>
+
+            <h1 class="centered">Mai ai cativa pasi</h1>
+
+            <div class="row">
+
+                <div class="col-50">
+                    <h2>Completeaza formularul</h2>
+                    <form id="formular" class="formular" method="POST" action="https://sheetdb.io/api/v1/3poe5phdg3pqt">
+                        <label for="nume">Nume Prenume</label>
+                        <input type="text" id="nume" name="data[nume]">
+
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="data[email]">
+
+                        </br>
+
+                        <label for="clasa">Clasa</label>
+                        <select name="data[clasa]" id="clasa">
+                            <option>VII</option>
+                            <option>VII</option>
+                            <option>IX</option>
+                            <option>X</option>
+                            <option>XI</option>
+                            <option>XII</option>
+                        </select>
+
+                        <select name="data[litera]" id="litera">
+                            <option>A</option>
+                            <option>B</option>
+                            <option>C</option>
+                        </select>
+
+                        <input id="submit" type="submit" value="inregistrare">
+                    </form>
+                </div>
+
+                <div clss="col-50">
+
+                    <h2>Profesorul cursului</h2>
+
+                    <div class="profesor">
+                        <div style="overflow:auto">                        
+                        <img src="../images/profesor.jpg">
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae eum odit saepe, nostrum
+                            fuga ipsum, placeat ipsa omnis qui labore error inventore quis autem soluta aperiam impedit
+                            iure ducimus est.
+                        </p>
+                        </div>
+
+                        <br />
+                        <b>Specialitatea</b>
+                        <span>Informatica</span>
+                        <br />
+                        <b>Email</b><a href="mailto:test@yahoo.com">test@yahoo.com</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="comments-box" ">
+    <h2>Ai o intrebare?</h2>
+
+    <textarea id="commentInput" placeholder="Scrie comentariul tau..."></textarea>
+    <br>
+    <button onclick="addComment()">Trimite</button>
+
+    <div id="commentsList"></div>
+       </div>
+
+
+        </section>
+    </main>
+   <footer>
+        <h3>Hoceanu Anna</h3>
+    </footer>
+
+<script>
+let comments = JSON.parse(localStorage.getItem("comments")) || [];
+
+function displayComments() {
+    const list = document.getElementById("commentsList");
+    list.innerHTML = "";
+
+    comments.forEach((comment) => {
+        const div = document.createElement("div");
+        div.className = "comment";
+        div.innerText = comment;
+        list.appendChild(div);
+    });
+}
+
+function addComment() {
+    const input = document.getElementById("commentInput");
+    const text = input.value.trim();
+
+    if (text === "") return;
+
+    comments.push(text);
+    localStorage.setItem("comments", JSON.stringify(comments));
+
+    input.value = "";
+    displayComments();
+}
+
+displayComments();
+</script>
+
+<script>
+
+     var form = document.getElementById('formular');
+        form.addEventListener("submit", e => {
+            e.preventDefault();
+            fetch(form.action, {
+                method: "POST",
+                body: new FormData(document.getElementById("formular")),
+            }).then(() => {
+                alert("Multumesc !");
+                form.reset();
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
