@@ -3,101 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projekte - Anna Hoceanu</title>
+    <title>Anna Hoceanu - Webdesign & Frontend</title>
 
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="icon" href="../images/icon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/icon.png">
 </head>
 <body>
 
     <header>
        
         <nav>
-            <a href="../index.html">Startseite</a>
-            <a href="inscrieri.html">Über mich</a>
-            <a href="materiale.html">Projekte</a>
+            <a href="index.html">Startseite</a>
+            <a href="pages/inscrieri.html">Über michi</a>
+            <a href="pages/materiale.html">Projekte</a>
         </nav>
     </header>
 
     <main>
-       <section id="materiale">
+       <section class="top-section">
 
-          <div class="tint">
-          </div>
+        <div class="tint">
+          <video autoplay loop muted id="index-video" src=video/video.mp4></video>
+        </div>
 
-             <div class="section-info"> <br><br>
-                <h1>Meine Projekte</h1>
-                <h3>Ausgewählte Arbeiten und praktische Beispiele</h3>
-            </div>
-  
+             <div class="section-info">
+                <h1>Anna Hoceanu -  Webdesign & Frontend</h1></br>
+                <H1 style="color:#0Bcd99">Meine Projekte</H1><br>
+
+                <h3>Ich interessiere mich für moderne Webentwicklung und gestalte erste eigene Webseiten mit HTML, CSS und WordPress.</br></br>
+                     Ich arbeite strukturiert, lerne schnell und entwickle meine Fähigkeiten kontinuierlich weiter. </br></br>
+                     Mein Ziel ist es, praktische Erfahrung im IT-Bereich zu sammeln und mich beruflich weiterzuentwickeln.</h3> <br>
+             
        </section>
 
        <section>
-             <h1 class="centered">Projekte</h1>
-              
-             <div class="row">
 
-    <div class="col-50">
-        <img src="../images/proiect1.jpg" onclick="openImage(this.src)" 
-style="width:90%; height:200px; object-fit:cover; cursor:pointer;">
-         <h3>Bildbearbeitung</h3>
-         <p>Retusche und Detailverbesserung für ein natürliches und profesionelles Ergebnis</p> 
-    </div>
+          <h1 class="centered">Meine Fähigkeiten</h1>
 
-    <div class="col-50">
-        <img src="../images/proiect2.jpg" onclick="openImage(this.src)" 
-style="width:90%; height:200px; object-fit:cover; cursor:pointer;">
-      <h3>Bildrestaurierung</h3>
-      <p>Wiederherstellung alter Fotos und Verbesserung der Bildqualität</p>
-    </div>
+          <div class="row">
 
-</div>
+            <div class="col-33">
+                
+                <div class="card">
+                   
+                    <img src="images/fon.jpg" style="width:90%; height:150px; object-fit:cover;"></br>
 
+                    <p>
+                        <b> Bildbearbeitung mit Photoshop  </b> </br> </br>
+                         Retusche, Hintergrundänderung und Farbkorrektur (Before / After).
+                    </p>
+                </div>
 
-<div class="row">
+            </div>
 
-          <div class="col-50">
-        <img src="../images/fon.jpg" onclick="openImage(this.src)" 
-style="width:90%; height:200px; object-fit:cover; cursor:pointer;">
-      
-<h3>Bildbearbeitung</h3>
-<p>Retusche, Farbkorrektur und Hintergrundänderung</p>        <br>
-      </div>
+             <div class="col-33">
+                
+                <div class="card">
+                   
+                    <img src="images/webdesign.jpg" style="width:90%; height:150px; object-fit:fill;"></br>
 
-    <div class="col-50">
-        <img src="../images/proiect3.jpg"  onclick="openImage(this.src)" 
-style="width:90%; height:200px; object-fit:cover; cursor:pointer;">
-       <h3>Farbkorrektur</h3>
-       <p>Optimierung von Farben, Licht und Kontrast für ein harmonisches Bild</p>
-        <br>
-      </div>
+                    <p>
+                        <b>Webdesign</b>  </br> </br>
+                          Erstellung von Webseiten mit HTML und CSS sowie erste Erfahrungen mit WordPress
+                    </p>
+                </div>
 
+            </div>
 
+             <div class="col-33">
+                
+                <div class="card">
+                   
+                    <img src="images/frondend.jpg" style="width:90%; height:150px; object-fit:fill;"> </br>
 
-</div>
+                    <p>
+                      <b>Frontend Grundlagen</b>  </br> </br> 
+                       Erste praktische Erfahrungen mit HTML und CSS sowie Verständnis für Struktur und Layout von Webseiten
+                    </p>
+                </div>
+
+            </div>
+
+          </div>
 
        </section>
+
     </main>
     
      <footer>
        
-        <h3>Hoceanu Anna</h3>
+        <h3> Anna Hoceanu</h3>
 
      </footer>
 
-     <div id="lightbox" onclick="closeImage()">
-        <img id="lightbox-img">
-     </div>
-
-<script>
-function openImage(src) {
-    document.getElementById("lightbox").style.display = "flex";
-    document.getElementById("lightbox-img").src = src;
-}
-
-function closeImage() {
-    document.getElementById("lightbox").style.display = "none";
-}
-</script>
 </body>
 </html>
