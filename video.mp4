@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über mich - Anna Hoceanu</title> 
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../images/icon.png">
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+            <a href="../index.html">Startseite</a>
+            <a href="inscrieri.html">Über mich</a>
+            <a href="materiale.html">Projekte</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inscrieri">
+
+            <div class="tint">
+
+            </div>
+
+            <div class="section-info">
+                <h1>Anna Hoceanu</h1>
+                <h3>Webdesign & Frontend</h3>
+            </div>
+
+        </section>
+
+        <section>
+
+<div class="row">
+
+    <!-- STÂNGA -->
+    <div class="col-50">
+        <h2>Über mich</h2>
+
+      <div class="about-box">
+        <img src="../images/ann.jpg" class="profil-poza">
+
+        <p>
+        Ich bin eine motivierte und kreative Person mit großem Interesse an Webdesign und Frontend-Entwicklung.
+
+       Ich habe erste praktische Erfahrungen mit HTML, CSS und WordPress gesammelt und arbeite aktiv an eigenen Projekten, um meine Kenntnisse zu verbessern.
+
+        Zusätzlich beschäftige ich mich mit Bildbearbeitung in Photoshop, insbesondere mit Retusche, Farbkorrektur und Hintergrundänderung.
+        </p>
+                      <!-- <b>Email</b><a href="mailto:test@yahoo.com">test@yahoo.com</a> -->
+       </div>
+    </div>
+
+    <!-- DREAPTA -->
+    <div class="col-50">
+        <h2>Meine Ziele</h2>  <br>
+
+        <p>
+        Ich entwickle meine Kenntnisse im Bereich Webdesign und Frontend kontinuierlich weiter und arbeite regelmäßig an eigenen Projekten.
+        </p>
+
+        <p>
+        Mein Ziel ist es, eine Einstiegsmöglichkeit im IT-Bereich zu finden, 
+        praktische Erfahrung zu sammeln und mich langfristig weiterzuentwickeln.
+        </p>
+    </div>
+
+</div>
+
+<br>
+<p><b>Email:</b> 
+<a href="mailto:anna.hoceanu@gmail.com">anna.hoceanu@gmail.com</a> <br>
+
+        </section>
+    </main>
+   <footer>
+        <h3>Anna Hoceanu</h3>
+    </footer>
+
+</body>
+
+</html>

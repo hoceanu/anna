@@ -3,100 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dezvoltarea web</title>
+    <title>Projekte - Anna Hoceanu</title>
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="images/icon.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../images/icon.png">
 </head>
 <body>
 
     <header>
        
         <nav>
-            <a href="index.html">Acasa</a>
-            <a href="pages/inscrieri.html">Inscrieri</a>
-            <a href="pages/materiale.html">Materiale</a>
+            <a href="../index.html">Startseite</a>
+            <a href="inscrieri.html">Über mich</a>
+            <a href="materiale.html">Projekte</a>
         </nav>
     </header>
 
     <main>
-       <section class="top-section">
+       <section id="materiale">
 
-        <div class="tint">
-          <video autoplay loop muted id="index-video" src=video/video.mp4></video>
-        </div>
-
-             <div class="section-info">
-                <h1>Invata dezvoltarea web</h1>
-                <H1 style="color:#0Bcd99">Gratuit</H1>
-
-                <h3>Disponibel pentru clasele a IIV - XII</h3>
-                <br/>
-                <h3>Implementat de:</h3>
-             
-                <img class="top-logo" src="images/tifs.jpg">
-       </section>
-
-       <section>
-
-          <h1 class="centered">Ce vei invata ?</h1>
-
-          <div class="row">
-
-            <div class="col-33">
-                
-                <div class="card">
-                   
-                    <img src="images/html.png">
-
-                    <p>
-                        <b>HTML</b> este standardul actual pentru structurarea și prezentarea conținutului pe web. 
-                        Învățarea HTML5 implică înțelegerea modului în care se construiește "coloana vertebrală" 
-                        a paginilor web moderne, punând accent pe semantică, 
-                        multimedia și funcționalități interactive.
-                    </p>
-                </div>
-
-            </div>
-
-             <div class="col-33">
-                
-                <div class="card">
-                   
-                    <img src="images/css.png">
-
-                    <p>
-                        <b>CSS5</b>  (Cascading Style Sheets) este limbajul folosit pentru
-                         a stila și a aranja elementele HTML într-o pagină web. Învățarea CSS implică stăpânirea modului în care culorile,
-                          fonturile, layout-ul și poziționarea elementelor sunt gestionate pentru a crea site-uri atractive și responsive.
-                    </p>
-                </div>
-
-            </div>
-
-             <div class="col-33">
-                
-                <div class="card">
-                   
-                    <img src="images/js.png">
-
-                    <p>
-                        Înveți <b>JavaScript</b>   (JS) pentru a crea pagini web interactive, aplicații web și, mai recent, chiar aplicații backend. 
-                        Este un limbaj esențial, considerat accesibil pentru începători, care permite manipularea directă a conținutului din browser
-                    </p>
-                </div>
-
-            </div>
-
+          <div class="tint">
           </div>
 
+             <div class="section-info"> <br><br>
+                <h1>Meine Projekte</h1>
+                <h3>Ausgewählte Arbeiten und praktische Beispiele</h3>
+            </div>
+  
        </section>
 
        <section>
-           <h1 class="centered">Ai mai studiat acestea Limbaje?</h1>
-           <h3 class="centered">Sa verificam cunostintele</h3>
-           
-           <iframe class="test" src="https://h5p.org/h5p/embed/1561215" width="718" height="338" frameborder="0" allowfullscreen="allowfullscreen" allow="geolocation *; microphone *; camera *; midi *; encrypted-media *" title="Verificarea cunostintelor"></iframe><script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js" charset="UTF-8"></script>
+             <h1 class="centered">Projekte</h1>
+              
+             <div class="row">
+
+    <div class="col-50">
+        <img src="../images/proiect1.jpg" onclick="openImage(this.src)" 
+style="width:90%; height:200px; object-fit:cover; cursor:pointer;">
+         <h3>Bildbearbeitung</h3>
+         <p>Retusche und Detailverbesserung für ein natürliches und profesionelles Ergebnis</p> 
+    </div>
+
+    <div class="col-50">
+        <img src="../images/proiect2.jpg" onclick="openImage(this.src)" 
+style="width:90%; height:200px; object-fit:cover; cursor:pointer;">
+      <h3>Bildrestaurierung</h3>
+      <p>Wiederherstellung alter Fotos und Verbesserung der Bildqualität</p>
+    </div>
+
+</div>
+
+
+<div class="row">
+
+          <div class="col-50">
+        <img src="../images/fon.jpg" onclick="openImage(this.src)" 
+style="width:90%; height:200px; object-fit:cover; cursor:pointer;">
+      
+<h3>Bildbearbeitung</h3>
+<p>Retusche, Farbkorrektur und Hintergrundänderung</p>        <br>
+      </div>
+
+    <div class="col-50">
+        <img src="../images/proiect3.jpg"  onclick="openImage(this.src)" 
+style="width:90%; height:200px; object-fit:cover; cursor:pointer;">
+       <h3>Farbkorrektur</h3>
+       <p>Optimierung von Farben, Licht und Kontrast für ein harmonisches Bild</p>
+        <br>
+      </div>
+
+
+
+</div>
 
        </section>
     </main>
@@ -107,5 +85,19 @@
 
      </footer>
 
+     <div id="lightbox" onclick="closeImage()">
+        <img id="lightbox-img">
+     </div>
+
+<script>
+function openImage(src) {
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = src;
+}
+
+function closeImage() {
+    document.getElementById("lightbox").style.display = "none";
+}
+</script>
 </body>
 </html>
